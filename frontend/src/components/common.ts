@@ -1,6 +1,24 @@
 import { t, i18n } from '../i18n.ts';
 import api from '../api.ts';
 
+const flagSvg = (lang: 'es' | 'en') => {
+  if (lang === 'es') return `
+    <svg width="22" height="15" viewBox="0 0 22 15" xmlns="http://www.w3.org/2000/svg" style="border-radius:2px;vertical-align:middle;display:inline-block">
+      <rect width="22" height="15" fill="#AA151B"/>
+      <rect width="22" height="7.5" y="3.75" fill="#F1BF00"/>
+    </svg>`;
+  return `
+    <svg width="22" height="15" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" style="border-radius:2px;vertical-align:middle;display:inline-block">
+      <rect width="60" height="40" fill="#012169"/>
+      <path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" stroke-width="8"/>
+      <path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" stroke-width="5"/>
+      <rect width="60" height="12" y="14" fill="#fff"/>
+      <rect width="12" height="40" x="24" fill="#fff"/>
+      <rect width="60" height="8" y="16" fill="#C8102E"/>
+      <rect width="8" height="40" x="26" fill="#C8102E"/>
+    </svg>`;
+};
+
 // Dynamic floating notification toast
 export const showToast = (message: string, type: 'success' | 'error' | 'info' = 'success') => {
   // Remove existing toast if present
@@ -88,7 +106,7 @@ export const renderHeader = (
           
           <!-- Language Toggler -->
           <button class="icon-btn" id="lang-toggle-btn" title="Change Language">
-            ${currentLang === 'es' ? '🇬🇧' : '🇪🇸'}
+            ${currentLang === 'es' ? flagSvg('en') : flagSvg('es')}
           </button>
 
           ${api.isAuthenticated() ? `
