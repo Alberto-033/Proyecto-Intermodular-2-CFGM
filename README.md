@@ -1,4 +1,4 @@
-# 💧 Sistema de Riego Inteligente y Automático con Arduino
+# 💧 Proyecto Intermodular - Sistema de Riego Inteligente y Automático con Arduino
 
 Este proyecto es una aplicación web full-stack premium y ultra-responsiva diseñada para monitorear y controlar un sistema de riego remoto y automático basado en una placa Arduino (ESP32/ESP8266) conectada localmente.
 
@@ -9,7 +9,7 @@ La aplicación cuenta con un diseño de UI moderno basado en **Glassmorphic Card
 ## 📁 Estructura General del Proyecto
 
 ```
-proyecto polla/
+Proyecto-Intermodular/
 ├── backend/
 │   ├── src/
 │   │   ├── index.ts        # Servidor HTTP Express y WebSocket Server

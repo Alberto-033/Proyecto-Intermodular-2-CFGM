@@ -1,7 +1,7 @@
 {
-  "name": "irrigation-backend",
+  "name": "proyecto-intermodular-backend",
   "version": "1.0.0",
-  "description": "Backend for Arduino Irrigation system",
+  "description": "Backend - Proyecto Intermodular: Sistema de Riego Inteligente con Arduino",
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
